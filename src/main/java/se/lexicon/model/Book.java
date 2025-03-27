@@ -8,21 +8,24 @@ package se.lexicon.model;
 public class Book {
     // todo: needs completion
 
-    private String id = getNextId();
+    private String id;
     private String title;
     private String author;
-    private boolean available = true;
+    private boolean available;
     private Person borrower;
 
     public Book(String title, String author){
         this.title = title;
         this.author = author;
+        this.id = getNextId();
+        setAvailable(true);
     }
 
     public Book(String title, String author, Person borrower){
         this.title = title;
         this.author = author;
         this.borrower = borrower;
+        this.id = getNextId();
         setAvailable(false);
     }
 
@@ -50,6 +53,9 @@ public class Book {
     }
 
     public void setId(String id) {
+        if (id == null || id.isEmpty()){
+            throw new IllegalArgumentException("Not allowed to be null or empty");
+        }
         this.id = id;
     }
 
