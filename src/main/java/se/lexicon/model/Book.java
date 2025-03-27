@@ -58,7 +58,6 @@ public class Book {
         }
         this.id = id;
     }
-
     public void setTitle(String title) {
         this.title = title;
     }
