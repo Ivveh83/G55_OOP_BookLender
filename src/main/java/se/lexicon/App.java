@@ -33,8 +33,6 @@ public class App {
         Ny bokstatus:""");
         kalleAnka.loanBook(book);
         System.out.println(book.getBookInformation());
-
-
     }
 
 }

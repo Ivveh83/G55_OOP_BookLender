@@ -41,8 +41,8 @@ public class Person {
 
     //Other methods
 
-    private int getNextId(){
-        return this.sequencer++;
+    private static int getNextId(){
+        return sequencer++;
     }
 
     public void loanBook(Book book){
